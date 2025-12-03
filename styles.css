@@ -73,19 +73,23 @@ body {
 header {
     background-color: var(--black);
     border-bottom: 2px solid var(--blue);
+    padding: 2rem;
 }
 
 h1 {
     display: inline;
+    margin-left: 40px;
+    margin-top: 3px;
     color: var(--blue);
     font-family: var(--font);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
+
 nav ul {
-    width: 100%;
-    margin: 0;
+    width: 50%;
+    margin-left: 50%;
     padding: 0;
     list-style: none;
     overflow: hidden;
@@ -96,7 +100,8 @@ nav ul {
 nav li a {
     display: block;
     font-family: var(--font);
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     padding: 1rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -107,9 +112,17 @@ nav li a {
 
 nav a:hover, nav input:hover {
     background-color: var(--blue);
+    color: var(--black);
 }
 
-label span {
+nav label {
+    position: absolute;
+    top: .5rem; 
+    right: .5rem; 
+    padding: 2rem;
+}
+
+nav label span {
     background-color: var(--white);
     display: block;
     height: .25rem;
@@ -118,7 +131,7 @@ label span {
     width: 2rem;
 }
 
-label span:before, label span:after {
+nav label span:before, label span:after {
     background: var(--white);
     content: '';
     display: block;
@@ -128,11 +141,11 @@ label span:before, label span:after {
     width: 100%;
 }
 
-label span:before {
+nav label span:before {
     top: .75rem;
 }
 
-label span:after {
+nav label span:after {
     top: -.75rem;
 }
 
@@ -140,12 +153,18 @@ label span:after {
     display: none;
 }
 
+input:checked ~ ul {
+    max-height: 500px;
+}
+
+
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    font-family: var(--font);
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
@@ -157,18 +176,214 @@ label span:after {
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+    color: var(--white);
+    font-family: var(--font);
+}
+
+#innovation .container{
+    backdrop-filter: blur(10px);
+    padding-bottom: 15px;
+}
+
+#innovation h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+#innovation p {
+    font-size: 10pt;
+    line-height: 1.5;
+    padding: 5px 0 30px 0;
+}
+
+#innovation a {
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--blue);
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+#innovation a:hover{
+    transition: .2s ease-in;
+    background-color: var(--red);
+    transform: scale(1.1,1.1);
+}
+
+
+h2 {
+    font-size: 1.5rem;
+    font-family: var(--font);
+    font-weight: bold;
+    padding: 15px;
+}
+
+h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 25px 0 10px 12px;
+}
+
+.container p {
+    font-size: 10pt;
+    line-height: 1.5;
+    padding: 10px 0 10px 0;
+}
+#offerings section {
+    color: var(--white);
+}
+
+.container section {
+    background-color: var(--blue);
+    border-radius: 8px;
+    padding-left: 15px;
+    margin-bottom: 12px;
+}
+
+.container section:hover {
+    transform: translate(0,-10px);
+    
+}
+
+#results, #profits, #growth{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 15px;
+}
+
+#results {
+    padding-bottom: 0;
+}
+
+#profits h3, #growth h3 {
+    font-size: 1.5rem;
+}
+
+#profits h3 {
+    padding: 0 0 25px 15px;
+}
+
+
+table {
+    border: 2px solid var(--black);
+    width: 100%;
+    
+}
+
+th {
+    background-color: var(--black);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 10pt;
+    border: 1px solid var(--charcoal);
+}
+
+tr:nth-of-type(odd) {
+    background-color: var(--charcoal);
+}
+
+tr:nth-of-type(even) {
+    background-color: var(--black);
+}
+
+#contact {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 10pt;
+    padding: 15px;
+}
+
+
+input, form label, textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input, textarea {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid var(--blue);
+}
+
+form label {
+    padding-bottom: 3px ;
+}
+
+input[type="submit"] {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 8px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    transition: .5s ease-in;
+    background-color: var(--red);
+    border: 3px solid var(--red);
+    transform: scale(1.1,1.1);
+}
+
+input:invalid, textarea:invalid {
+    border: 3px solid var(--red);
+}
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 10pt;
+    text-align: center;
+    padding: 10px;
+}
+
+footer .container {
+    padding: 15px;
+}
+
+footer .container p {
+    padding: 0;
+}
+
+#emailus {
+    color: var(--blue);
+}
+
+#phone {
+    color: var(--white);
+    text-decoration: none;
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
 .logo {
     content: "";
-
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    animation-name: float;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+
+@keyframes float {
+    0% {top: 20px;}
+    25% {top: 25px}
+    50% {top: 30px;}
+    75% {top: 25px;}
+    100%{top: 20px;}
+}
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -188,7 +403,7 @@ label span:after {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 1s ease-in;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -216,21 +431,102 @@ label span:after {
 }
 
 
-/* MEDIA QUERIES (MEDIUM) */ 
 
+
+
+
+/* MEDIA QUERIES (MEDIUM) */ 
+@media screen and (min-width:700px){
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        overflow: visible;
+    }
+
+    nav li a {
+        padding-top: 1.6rem;
+    }
+
+    nav label span {
+        display: none;
+    }
+    
+    #offerings .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    #offerings .container section {
+        margin: 0;
+    }
+
+    #offerings h2 {
+        grid-column: 1/3;
+    }
+    
+    
     #results {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .results-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .results-table {
-        width: 50%;
-    }
-    .bar-chart {
-        width: 50%;
+
+    #proven {
+        grid-column: 1/3;
     }
 
+    #profits {
+        padding: 15px;
+    }
+    
+    #growth h3 {
+        padding: 0;
+    }
+    
+    .results-table {
+        width: 100%;
+        
+    }
+    #bar-chart {
+        width: 100%;
+    }
+}
 
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width:800px){
+
+    #offerings .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    #offerings .container section {
+        margin: 0;
+    }
+
+    #offerings h2 {
+        grid-column: 1/4;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    input {
+        padding: 10px;
+        margin: 0;
+    }
+
+    input[type="submit"] {
+        margin-top: 17px;
+    }
+}
